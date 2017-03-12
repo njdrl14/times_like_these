@@ -1,0 +1,25 @@
+{
+  "name": "times_like_these",
+  "version": "1.0.0",
+  "description": "webpage for you cover band",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njdrl14/times_like_these.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/njdrl14/times_like_these/issues"
+  },
+  "homepage": "https://github.com/njdrl14/times_like_these#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1"
+  }
+}
