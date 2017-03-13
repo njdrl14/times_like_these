@@ -19,7 +19,7 @@
   border-radius: 0;
   height: 100%;
   border: none;
-  background-color: #B00000;
+  background-color: #FFF4BE;
 }
 
 .navbar-fixed-left .navbar-nav > li {
@@ -32,20 +32,57 @@
 }
 
 ul.nav.navbar-nav {
-    padding-left: 87px;
+    padding-left: 82px;
     padding-top: 100px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: black;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    margin-right: 60px;
+    font-family: 'Francois One', sans-serif;
+    font-size: 22px;
+
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #B50000;
+    background-color: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
 }
 
 .name {
 	font-family: 'Francois One', sans-serif;
 	font-size: 70px;
 	margin-top: 30px;
-	font-color:black;
+	color: #B50000;
 	text-align: center;
 }
 
-.whiteText{
-	color: white;
+.blackText{
+	color: black;
 }
 
 /* On using dropdown menu (To right shift popuped) */
@@ -57,7 +94,7 @@ ul.nav.navbar-nav {
 	
 		<div class="navbar navbar-inverse navbar-fixed-left">
 			<h1 class="name">
-				TIMES <span class="whiteText">LIKE</span> THESE
+				TIMES <span class="blackText">LIKE</span> THESE
 			</h1>
 		  	<ul class="nav navbar-nav">
 			   <li><a href="#1">Link2</a></li>
@@ -67,7 +104,8 @@ ul.nav.navbar-nav {
 		 	</ul>
 		</div>
 
-		<div id="1" style="min-height: 1000px;background-color: blue;">
+		<div id="1" style="min-height: 701px;background-image: url(http://jeremy-walker.com/wp-content/uploads/2013/08/jjwmono.jpg); background-repeat: no-repeat;
+			background-size: cover;">
 		</div>
 		<div id="2" style="min-height: 1000px;background-color: green;">
 		</div>
