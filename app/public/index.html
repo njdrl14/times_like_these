@@ -12,6 +12,8 @@
 
 
 <style type="text/css">
+
+/*- - - - - - - NAV BAR STYLES - - - - - - - -  */
 	
 .navbar-fixed-left {
   width: 237px;
@@ -91,58 +93,105 @@ a.tlt {
     text-decoration: none;
 }
 
-/* On using dropdown menu (To right shift popuped) */
+/* - - - - - - - - - - - - - - - - - - - - - - -- */
+
+/*Main Container*/
+.container-fluid {
+	padding-right: 0px;
+	padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: -15px;
+}
+
+/* Bio Page Styles */
+
+.col-md-4 {
+    /* padding: 0px; */
+    margin-left: 578px;
+}
+
+.bio-heading {
+    text-align: center;
+    font-family: 'Francois One', sans-serif;
+
+}
+
+
 
 }
 </style>
 </head>
-<body>
-	
-		<div class="navbar navbar-inverse navbar-fixed-left">
-			<h1 class="name">
-				<a class="tlt" href="#1">
-				TIMES <span class="blackText">LIKE</span> THESE
-				</a>
-			</h1>
-		  	<ul class="nav navbar-nav">
-			   <li><a href="#2">BIO</a></li>
-			   <li><a href="#3">MUSIC</a></li>
-			   <li><a href="#4">SHOWS</a></li>
-			   <li><a href="#5">CONTACT</a></li>
-		 	</ul>
-		</div>
+	<body>
+		<div class="container-fluid">
+			<div class="navbar navbar-inverse navbar-fixed-left">
+				<h1 class="name">
+					<a class="tlt" href="#1">
+					TIMES <span class="blackText">LIKE</span> THESE
+					</a>
+				</h1>
+			  	<ul class="nav navbar-nav">
+				   <li><a href="#2">BIO</a></li>
+				   <li><a href="#3">MUSIC</a></li>
+				   <li><a href="#4">SHOWS</a></li>
+				   <li><a href="#5">CONTACT</a></li>
+			 	</ul>
+			</div>
 
-		<div id="1" style="min-height: 701px;background-image: url(http://jeremy-walker.com/wp-content/uploads/2013/08/jjwmono.jpg); background-repeat: no-repeat;
-			background-size: cover;">
-		</div>
-		<div id="2" style="min-height: 1000px;background-color: green;">
-		</div>
-		<div id="3" style="min-height: 1000px;background-color: purple;">
-		</div>
-		<div id="4" style="min-height: 1000px;background-color: orange;">
-		</div>
-		<div id="5" style="min-height: 1000px;background-color: blue;">
-		</div>
+			<!-- Home Screen -->
+			<div id="1" style="min-height: 701px;background-image: url(http://jeremy-walker.com/wp-content/uploads/2013/08/jjwmono.jpg); background-repeat: no-repeat;
+				background-size: cover;">
+			</div>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<!-- Bio -->
+			<div id="2" style="min-height: 720px;background-color: #E6E2EB;">
 
-		<script>
-			$(document).ready(function(){
-  $('a[href*=#]').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-    && location.hostname == this.hostname) {
-      var $target = $(this.hash);
-      $target = $target.length && $target
-      || $('[name=' + this.hash.slice(1) +']');
-      if ($target.length) {
-        var targetOffset = $target.offset().top;
-        $('html,body')
-        .animate({scrollTop: targetOffset}, 1000);
-       return false;
-      }
-    }
-  });
-});
-		</script>
- </body> 
+				<div class="row">
+				    <div class="col-md-4">
+				    	<h1 class="bio-heading">Bio</h1>
+				    </div>
+				    
+				 </div>
+
+			</div>
+
+			<!-- Music -->
+			<div id="3" style="min-height: 720px;background-color: purple;">
+			</div>
+
+			<!-- Shows -->
+			<div id="4" style="min-height: 720px;background-color: orange;">
+			</div>
+
+			<!-- Contact -->
+			<div id="5" style="min-height: 720px;background-color: blue;">
+			</div>
+
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+			<script>
+			//Paralax Scroll
+				$(document).ready(function(){
+			  $('a[href*=#]').click(function() { //if you change div ids, may have to adjust here. id keep the same. 
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+			    && location.hostname == this.hostname) {
+			      var $target = $(this.hash);
+			      $target = $target.length && $target
+			      || $('[name=' + this.hash.slice(1) +']');
+			      if ($target.length) {
+			        var targetOffset = $target.offset().top;
+			        $('html,body')
+			        .animate({scrollTop: targetOffset}, 1000);//keep set at 1000
+			       return false;
+			      }
+			    }
+			  });
+			});
+			</script>
+		</div>
+	</body> 
 </html>
